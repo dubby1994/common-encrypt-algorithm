@@ -6,6 +6,10 @@ package cn.dubby.encrypt.encoding;
 
 import java.util.Base64;
 
+/**
+ * 使用JDK1.8提供的Base64来编解码
+ * @see java.util.Base64
+ */
 public class Base64Util {
 
     private static final Base64.Encoder EncoderWithoutPadding = Base64.getEncoder().withoutPadding();
