@@ -16,7 +16,7 @@ public class DESedeTest {
     public void encryptDecrypt() throws NoSuchAlgorithmException, IllegalBlockSizeException, NoSuchPaddingException, BadPaddingException, InvalidKeySpecException, InvalidKeyException {
         String data = "Hello, world.";
         KeyGenerator keyGenerator = KeyGenerator.getInstance("DESede");
-        keyGenerator.init(112);
+        keyGenerator.init(168);//还可以选112
         SecretKey secretKey = keyGenerator.generateKey();
         byte[] keyBytes = secretKey.getEncoded();
 
