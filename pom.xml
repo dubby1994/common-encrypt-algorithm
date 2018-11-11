@@ -11,6 +11,7 @@
     <modules>
         <module>signature</module>
         <module>encoding</module>
+        <module>symmetric-encryption</module>
     </modules>
 
     <properties>
