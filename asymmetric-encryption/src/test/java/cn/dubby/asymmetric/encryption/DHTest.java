@@ -24,9 +24,7 @@ import java.security.spec.InvalidKeySpecException;
 import java.security.spec.X509EncodedKeySpec;
 
 /**
- * PKCS8EncodedKeySpec pkcs8EncodedKeySpec = new PKCS8EncodedKeySpec(publicKeyBytesB);
- * KeyFactory keyFactory = KeyFactory.getInstance("DH");
- * publicKeyB_copy = keyFactory.generatePublic(pkcs8EncodedKeySpec);
+ * JVM Option:-Djdk.crypto.KeyAgreement.legacyKDF=true
  */
 public class DHTest {
 
@@ -36,9 +34,6 @@ public class DHTest {
 
     private static final String plainText = "Hello, Dubby";
 
-    /**
-     * JVM Option:-Djdk.crypto.KeyAgreement.legacyKDF=true
-     */
     public static void main(String[] args) throws NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeySpecException, InvalidKeyException, NoSuchPaddingException, BadPaddingException, IllegalBlockSizeException {
         //构建A的密钥
         DHPrivateKey privateKeyA;
