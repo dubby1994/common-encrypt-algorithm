@@ -12,7 +12,7 @@ public class HexUtil {
     };
 
     public static String toHex(byte[] src) {
-        StringBuilder sb = new StringBuilder(src.length * 2);
+        StringBuilder sb = new StringBuilder(src.length << 1);
         for (byte aSrc : src) {
             sb.append(digits[(aSrc & 0xF0) >>> 4]);
             sb.append(digits[(aSrc & 0x0F)]);
