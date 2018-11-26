@@ -8,7 +8,7 @@ public class HexUtilTest {
 
     @Test
     public void toHex() {
-        byte[] bytes = {(byte) 0, (byte) 1, (byte) 2, (byte) 3};
+        byte[] bytes = {(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 255, (byte) 254};
         System.out.println(HexUtil.toHex(bytes));
     }
 
