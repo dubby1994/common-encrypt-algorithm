@@ -13,6 +13,7 @@
         <module>encoding</module>
         <module>symmetric-encryption</module>
         <module>asymmetric-encryption</module>
+        <module>digital-signature</module>
     </modules>
 
     <properties>
