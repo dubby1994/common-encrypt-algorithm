@@ -1,6 +1,7 @@
 package cn.dubby.digital.signature.test;
 
 import cn.dubby.digital.signature.RSASignature;
+import org.apache.commons.codec.binary.Hex;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -32,10 +33,11 @@ public class RSASignatureTest {
         //使用私钥加签
         byte[] sign = RSASignature.sign(privateKey.getEncoded(), dataBytes);
 
+        System.out.println(Hex.encodeHexString(sign));
+
         //使用公钥验签
         boolean verifyResult = RSASignature.verify(publicKey.getEncoded(), dataBytes, sign);
 
-        System.out.println(verifyResult);
         Assert.assertTrue(verifyResult);
     }
 
