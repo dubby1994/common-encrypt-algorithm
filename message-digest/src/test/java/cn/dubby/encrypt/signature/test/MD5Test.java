@@ -29,7 +29,7 @@ public class MD5Test {
     public void commonsCodecDigest() {
         String data = "Hello, world.MD5消息摘要";
         byte[] dataBytes = data.getBytes(Charset.forName("UTF-8"));
-        byte[] digestBytes = DigestUtils.md5(dataBytes);
+        byte[] digestBytes = org.apache.commons.codec.digest.DigestUtils.md5(dataBytes);
 
         System.out.println(HexUtil.toHex(digestBytes));
         System.out.println(Hex.encodeHexString(digestBytes));

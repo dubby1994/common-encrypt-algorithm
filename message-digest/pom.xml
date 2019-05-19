@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>signature</artifactId>
+    <artifactId>message-digest</artifactId>
     <dependencies>
         <dependency>
             <groupId>cn.dubby</groupId>
