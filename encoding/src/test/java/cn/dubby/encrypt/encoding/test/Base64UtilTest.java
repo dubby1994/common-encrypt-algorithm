@@ -16,6 +16,16 @@ public class Base64UtilTest {
 
     @Test
     public void encodeDecode() {
+        System.out.println(new String(Base64Util.encode("1".getBytes())));
+        System.out.println(new String(Base64Util.encode("11".getBytes())));
+        System.out.println(new String(Base64Util.encode("111".getBytes())));
+        System.out.println(new String(Base64Util.encode("1111".getBytes())));
+
+        System.out.println(new String(Base64Util.encodeURLSafe("1".getBytes())));
+        System.out.println(new String(Base64Util.encodeURLSafe("11".getBytes())));
+        System.out.println(new String(Base64Util.encodeURLSafe("111".getBytes())));
+        System.out.println(new String(Base64Util.encodeURLSafe("1111".getBytes())));
+
         System.out.println("encodeDecode");
         byte[] srcBytes = originStr.getBytes(Charset.forName("UTF-8"));
         byte[] encodeBytes = Base64Util.encode(srcBytes);
