@@ -23,4 +23,18 @@ public class HexUtilTest {
         Assert.assertArrayEquals(bytes, result);
     }
 
+    @Test
+    public void test() {
+        System.out.println("Byte MAX:\t" + Byte.MAX_VALUE);
+
+        //Base64
+        System.out.println((1 << 6) - 1);
+        //Base32
+        System.out.println((1 << 5) - 1);
+
+        for (int i = 0; i < 9; ++i) {
+            System.out.println(i + "\t" + (1 << i - 1));
+        }
+    }
+
 }
