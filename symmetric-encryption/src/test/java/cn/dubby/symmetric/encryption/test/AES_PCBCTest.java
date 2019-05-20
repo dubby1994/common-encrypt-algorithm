@@ -17,7 +17,7 @@ public class AES_PCBCTest {
     @Test
     public void encryptDecrypt() throws NoSuchAlgorithmException, IllegalBlockSizeException, NoSuchPaddingException, BadPaddingException, InvalidKeySpecException, InvalidKeyException, InvalidAlgorithmParameterException {
         /**
-         * iv必须是16位
+         * iv必须是16个byte
          */
         String data = "Hello, world.", iv = "1234567812345678";
         KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
