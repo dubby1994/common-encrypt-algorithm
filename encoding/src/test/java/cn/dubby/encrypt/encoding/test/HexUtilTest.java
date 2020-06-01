@@ -43,26 +43,31 @@ public class HexUtilTest {
     public void testMatch() {
         String str = "我是道玄，我在测试，abc哈哈哈";
         String subStr1 = "道玄";
-        String subStr2 = "a";
+        String subStr2 = "ab";
         String subStr3 = "道";
-        String subStr4 = "玄";
+        String subStr4 = "，";
 
         String hex = HexUtil.toHex(str.getBytes(StandardCharsets.UTF_8));
+        System.out.println("全文");
         System.out.println(hex);
 
         String subHex1 = HexUtil.toHex(subStr1.getBytes(StandardCharsets.UTF_8));
+        System.out.println("子串1");
         System.out.println(subHex1);
         System.out.println(hex.indexOf(subHex1));
 
         String subHex2 = HexUtil.toHex(subStr2.getBytes(StandardCharsets.UTF_8));
+        System.out.println("子串2");
         System.out.println(subHex2);
         System.out.println(hex.indexOf(subHex2));
 
         String subHex3 = HexUtil.toHex(subStr3.getBytes(StandardCharsets.UTF_8));
+        System.out.println("子串3");
         System.out.println(subHex3);
         System.out.println(hex.indexOf(subHex3));
 
         String subHex4 = HexUtil.toHex(subStr4.getBytes(StandardCharsets.UTF_8));
+        System.out.println("子串4");
         System.out.println(subHex4);
         System.out.println(hex.indexOf(subHex4));
     }
